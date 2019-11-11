@@ -1,5 +1,15 @@
 <?php
-require_once 'db/connectmysql.php';
+
+//require_once 'db/connectmysql.php';
+
+//echo $_SERVER['REQUEST_URI'];
+$url_login = $_SERVER['REQUEST_URI']=='/admin/' ? 
+'../db/connectmysql.php': 'db/connectmysql.php';  
+
+require_once $url_login; //M.B.
+
+
+
 class User{
 		private $id;
 		private $login;
