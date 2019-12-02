@@ -10,6 +10,7 @@
     @endif
 </div>
 
+@if (!Auth::guest())
 <div class="row marketing">
     <div class="col-lg-6">
         <h4>События на сегодня</h4>
@@ -35,4 +36,5 @@
         @endif
     </div>
 </div>
+  @endif
 @stop
